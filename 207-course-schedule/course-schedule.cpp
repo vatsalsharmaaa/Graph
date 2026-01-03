@@ -23,9 +23,7 @@ public:
             }
 
         }
-        if(count==n) return true;
-
-        return false;
+       return count==n;
 
     }
     bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
