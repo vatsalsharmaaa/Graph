@@ -87,3 +87,78 @@ public:
         return ans;
     }
 };
+
+// class Solution {
+//   public:
+//   typedef pair<int,int>p;
+//     vector<int> shortestPath(int V, vector<vector<int>> &edges, int src, int dest) {
+//         vector<vector<p>>adj(V+1);
+        
+//         for(auto x:edges){
+//             int u=x[0];
+//             int v=x[1];
+//             int w=x[2];
+//             adj[u].push_back({v,w});
+//             adj[v].push_back({u,w});
+            
+//         }
+//         vector<int>dist(V+1,INT_MAX);
+//         vector<int>parent(V+1,-1);
+//         priority_queue<p,vector<p>,greater<p>>pq;
+//         pq.push({0,src});
+//         dist[src]=0;
+        
+//         while(!pq.empty()){
+//             int node= pq.top().second;
+//             int weight=pq.top().first;
+//             pq.pop();
+            
+//             for(auto x:adj[node]){
+                
+//                 int node_=x.first;
+//                 int weight_=x.second;
+//                 if(weight+weight_<dist[node_]){
+//                     dist[node_]=weight+weight_;
+//                     parent[node_]=node;
+//                     pq.push({weight+weight_,node_});
+//                 }
+//             }
+//         }
+//         if(dist[dest]==INT_MAX)return {-1};
+//         vector<int>res;
+//         res.push_back(dest);
+        
+//         while(parent[dest]!=-1){
+//             res.push_back(parent[dest]);
+//             dest=parent[dest];
+//         }
+//         reverse(res.begin(),res.end());
+//         return res;
+        
+//     }
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
